@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id='status'><span id='status-span' style='color:red'>Non connecté</span></div>
+<div id="message" style="height:600px;width:80%;overflow:auto;float:left;background-color:#eee;"></div>
+<div id="users" style="height:600px;width:20%;overflow:auto;float:right;background-color:#ddd;margin-top:-14px;"></div>
+<div id="inputs">
+  <input type="text" style="float:left;" id="nick" placeholder="Pseudo" />
+  <input type="button" style="float:left;" onClick="client.changeNick();" value="OK"/>
+  <input type="text" id="sentmsg" size="120" style="float:left;"/>
+  <input type="button" value="OK" style="float:left;" onClick="client.sendMsg();" />
+</div>
+<script src="sockjs-0.3.min.js"></script>
+<script src="client.js"></script>
+<script>Chat();</script>
+</body>
+</html>
